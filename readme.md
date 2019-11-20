@@ -15,3 +15,5 @@ endpoint : http://api.zeeat.com/api/v1/
     barta answer: http://api.zeeat.com/api/v1/bartaanswers
     query(prosno): http://api.zeeat.com/api/v1/queries
     query answer : http://api.zeeat.com/api/v1/queryanswers
+
+    fcm token:  http://api.zeeat.com/api/v1/fcmtokens
