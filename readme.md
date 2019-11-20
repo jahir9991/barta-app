@@ -12,4 +12,6 @@ endpoint : http://api.zeeat.com/api/v1/
 
     user: http://api.zeeat.com/api/v1/users
     barta: http://api.zeeat.com/api/v1/bartas
+    barta answer: http://api.zeeat.com/api/v1/bartaanswers
     query(prosno): http://api.zeeat.com/api/v1/queries
+    query answer : http://api.zeeat.com/api/v1/queryanswers
