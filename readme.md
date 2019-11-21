@@ -9,6 +9,22 @@ endpoint : http://api.zeeat.com/api/v1/
     schema info : http://api.zeeat.com/api/v1/{table name}/info
 
     area: http://api.zeeat.com/api/v1/areas
+    
+# Auth
+    login:   post::  http://api.zeeat.com/api/v1/auth/login  param::{phone: string,password :string }
+    signout: post::  http://api.zeeat.com/api/v1/auth/signOut  param:: { fcm_token: string }
+
+# token
+    post::  http://api.zeeat.com/api/v1/fcmtokens   param::{user_id: number; fcm_token: string}
+    
+# Area     
+    get all divisions:   http://api.zeeat.com/api/v1/areas?limit=all&type_id=4
+    only for sylhet :    http://api.zeeat.com/api/v1/areas?limit=all&type_id=4&id=67
+    alldistrictof_sylhet http://api.zeeat.com/api/v1/areas?limit=all&type_id=5parent_id=67 
+    for upazilla         http://api.zeeat.com/api/v1/areas?limit=all&type_id=6parent_id=***
+
+
+        
 
     user: http://api.zeeat.com/api/v1/users
     barta: http://api.zeeat.com/api/v1/bartas
