@@ -23,6 +23,41 @@ endpoint : http://api.zeeat.com/api/v1/
     alldistrictof_sylhet http://api.zeeat.com/api/v1/areas?limit=all&type_id=5parent_id=67 
     for upazilla         http://api.zeeat.com/api/v1/areas?limit=all&type_id=6parent_id=***
 
+# barta 
+   create new barta 
+   post::  http://api.zeeat.com/api/v1/bartas
+    form::
+        let selectAll = '';
+		let parent_id_list = [];
+		let officer_id_list = [];
+        
+       if (this.selectAllDivision) {
+			selectAll = 'division';
+		}
+        else if (this.selectAllDistrict) {
+			selectAll = 'district';
+			const divisionIdList = this.selectedDivision.map(item => item.id);
+			parent_id_list = divisionIdList;
+		} 
+        else if (this.selectAllUpazilla) {
+			selectAll = 'upazilla';
+			const districtIdList = this.selectedDistrict.map(item => item.id);
+			parent_id_list = districtIdList;
+		}
+        else if (this.selectAllOfficer) {
+			selectAll = 'officer';
+			const upazillaIdList = this.selectedUpazilla.map(item => item.id);
+			parent_id_list = upazillaIdList;
+		} 
+        else {
+			officer_id_list = this.selectedOfficer.map(item => item.id);
+		}
+        mydata.append('status', '1');
+		mydata.append('select_all', selectAll);
+		mydata.append('parent_id_list', JSON.stringify(parent_id_list));
+		mydata.append('officer_id_list', JSON.stringify(officer_id_list));
+   
+   
 
         
 
