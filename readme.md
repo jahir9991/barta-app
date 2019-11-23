@@ -57,6 +57,11 @@ endpoint : http://api.zeeat.com/api/v1/
 		mydata.append('parent_id_list', JSON.stringify(parent_id_list));
 		mydata.append('officer_id_list', JSON.stringify(officer_id_list));
    
+  get all officer by upazilla id:
+  
+  	http://api.zeeat.com/api/v1/users?limit=all&role=officer&upazilla_id=[2968,99]
+	
+	
    
 # All
         
