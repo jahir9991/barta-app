@@ -27,10 +27,10 @@ endpoint : http://api.zeeat.com/api/v1/
    create new barta 
    post::  http://api.zeeat.com/api/v1/bartas
     form::
+    
         let selectAll = '';
-		let parent_id_list = [];
-		let officer_id_list = [];
-        
+	let parent_id_list = [];
+	let officer_id_list = [];
        if (this.selectAllDivision) {
 			selectAll = 'division';
 		}
