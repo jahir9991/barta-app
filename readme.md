@@ -60,10 +60,43 @@ endpoint : http://api.zeeat.com/api/v1/
    
   get all officer by upazilla id:
   
-  	http://api.zeeat.com/api/v1/users?limit=all&role=officer&upazilla_id=[2968,99]
+  	  http://api.zeeat.com/api/v1/users?limit=all&role=officer&upazilla_id=[2968,99]
+	  
+	  
 	
+# Barta answer
+	get by id::           http://api.zeeat.com/api/v1/bartaanswers/{id}
+	get by receiver_id::  http://api.zeeat.com/api/v1/bartaanswers?receiver_id=10
 	
-   
+   	update :: put::       http://api.zeeat.com/api/v1/bartaanswers/{id} 
+			      param:: { answer_body:'....'}
+	
+# Query  
+	http://api.zeeat.com/api/v1/queries
+	
+	create new query::  post:: http://api.zeeat.com/api/v1/queries  
+			   param::      {	sender_id:1,
+						message_type:'NORMAL',
+						message_title:'any',
+						message_body:'...',
+						status:1,
+						select_all:'officer', //same logic like barta
+						parent_id_list:'[9,9]',//...
+						officer_id_list:'[9,9]',//...
+						question_list:'[{"question":"কিভাবে জেলার মান উন্নয়ন করা সম্ভব? ","answer":null},
+								{"question":"কিভাবে জেলার মান উন্নয়ন করা সম্ভব? ","answer":null}
+							       ]'
+					 } 
+ # Query answer
+ 		http://api.zeeat.com/api/v1/queryanswers
+	get by id::           http://api.zeeat.com/api/v1/queryanswers/{id}
+	get by receiver_id::  http://api.zeeat.com/api/v1/queryanswers?receiver_id=10
+	update :: put::       http://api.zeeat.com/api/v1/bartaanswers/{id} 
+			      param:: { answer_list: '[{"question":"ghh","answer":"জরুরি "}]' }
+ 
+
+
+
 # All
         
 
