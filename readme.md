@@ -91,7 +91,7 @@ endpoint : http://api.zeeat.com/api/v1/
  		http://api.zeeat.com/api/v1/queryanswers
 	get by id::           http://api.zeeat.com/api/v1/queryanswers/{id}
 	get by receiver_id::  http://api.zeeat.com/api/v1/queryanswers?receiver_id=10
-	update :: put::       http://api.zeeat.com/api/v1/bartaanswers/{id} 
+	update :: put::       http://api.zeeat.com/api/v1/queryanswers/{id} 
 			      param:: { answer_list: '[{"question":"ghh","answer":"জরুরি "}]' }
  
 
