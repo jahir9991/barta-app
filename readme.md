@@ -95,7 +95,20 @@ endpoint : http://api.zeeat.com/api/v1/
 			      param:: { answer_list: '[{"question":"ghh","answer":"জরুরি "}]' }
  
 # profile update 
-
+	 put   https://api.zeeat.com/api/v1/users/{id}
+	 param::	{ address: "1"
+			email: "jahir@gmail.com"
+			name: "abc"
+			phone: "111111"}
+ # password update
+ 	post   https://api.zeeat.com/api/v1/auth/passwordchange
+	param::  {     id: 9 //userid
+			new_password: "aaaa"
+			old_password: "aaaa"
+		 }
+# avatar update
+ 	put   https://api.zeeat.com/api/v1/users/{id}
+	param::	{ avatar: file}
 
 
 # All
