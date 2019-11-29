@@ -94,6 +94,7 @@ endpoint : http://api.zeeat.com/api/v1/
 	update :: put::       http://api.zeeat.com/api/v1/queryanswers/{id} 
 			      param:: { answer_list: '[{"question":"ghh","answer":"জরুরি "}]' }
  
+# profile update 
 
 
 
